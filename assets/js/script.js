@@ -83,46 +83,92 @@ if (contactForm) {
   });
 }
 
+const brandMarks = document.querySelectorAll('.brand-mark');
+brandMarks.forEach((mark) => {
+  mark.textContent = 'GC';
+  mark.setAttribute('aria-label', 'GC monogram');
+});
+
 const logoStyles = `
-  .brand {
-    gap: 0.7rem;
+  .site-header .brand {
+    gap: 0.88rem;
   }
 
-  .brand-mark {
-    width: 168px;
-    height: 50px;
-    border: none;
-    border-radius: 0;
+  .site-header .brand-mark {
+    width: 52px;
+    height: 52px;
+    border-radius: 18px;
+    border: 1px solid rgba(242, 207, 121, 0.28);
+    background: linear-gradient(145deg, rgba(242, 207, 121, 0.24), rgba(217, 171, 73, 0.72));
+    color: #07111f;
+    display: grid;
+    place-items: center;
+    font-size: 1.12rem;
+    font-weight: 800;
+    letter-spacing: -0.08em;
+    line-height: 1;
+    box-shadow: 0 14px 26px rgba(217, 171, 73, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.42);
+    text-transform: uppercase;
+  }
+
+  .site-header .brand-copy {
     display: block;
-    background: transparent url("assets/img/logo-dark.png") center / contain no-repeat;
-    color: transparent;
-    font-size: 0;
-    box-shadow: none;
   }
 
-  .brand-copy {
-    display: none;
+  .site-header .brand-copy strong {
+    font-size: 1rem;
+    letter-spacing: -0.02em;
   }
 
-  .footer-brand .brand-mark {
-    width: 176px;
-    height: 54px;
-    margin-bottom: 0.65rem;
+  .site-header .brand-copy span {
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .site-footer .brand-mark {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 0.85rem;
+    border-radius: 20px;
+    border: 1px solid rgba(242, 207, 121, 0.2);
+    background: linear-gradient(145deg, rgba(242, 207, 121, 0.22), rgba(217, 171, 73, 0.62));
+    color: #07111f;
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: -0.08em;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
   }
 
   @media (max-width: 560px) {
-    .brand-mark {
-      width: 138px;
-      height: 42px;
+    .site-header .brand-mark {
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      font-size: 1rem;
     }
 
-    .footer-brand .brand-mark {
-      width: 154px;
-      height: 48px;
+    .site-header .brand-copy strong {
+      font-size: 0.92rem;
+    }
+
+    .site-header .brand-copy span {
+      font-size: 0.72rem;
+    }
+
+    .site-footer .brand-mark {
+      width: 52px;
+      height: 52px;
+      border-radius: 18px;
+      font-size: 1.08rem;
     }
   }
 `;
 
+const existingLogoStyle = document.querySelector('[data-brand-logo-style]');
+if (existingLogoStyle) existingLogoStyle.remove();
+
 const styleTag = document.createElement('style');
+styleTag.setAttribute('data-brand-logo-style', 'true');
 styleTag.textContent = logoStyles;
 document.head.appendChild(styleTag);
