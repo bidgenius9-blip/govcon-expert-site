@@ -1,0 +1,29 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldFill" x1="40" y1="28" x2="220" y2="236" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F7D98B"/>
+      <stop offset="55%" stop-color="#D9AB49"/>
+      <stop offset="100%" stop-color="#B98522"/>
+    </linearGradient>
+    <linearGradient id="goldStroke" x1="32" y1="24" x2="210" y2="220" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFE7AE"/>
+      <stop offset="100%" stop-color="#C7922F"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="44" y1="36" x2="104" y2="114" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.72"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="10" y="14" width="236" height="236" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#6F4F12" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="28" y="28" width="200" height="200" rx="56" fill="url(#goldFill)"/>
+    <rect x="29.5" y="29.5" width="197" height="197" rx="54.5" stroke="url(#goldStroke)" stroke-width="3"/>
+    <path d="M58 52C58 44.268 64.268 38 72 38H112C88.804 38 70 56.804 70 80V176C70 199.196 88.804 218 112 218H72C64.268 218 58 211.732 58 204V52Z" fill="url(#shine)"/>
+  </g>
+
+  <path d="M119.7 88.6C112.5 81.8 102.4 78 90.4 78C66 78 47 95.9 47 128C47 159.8 65.9 178 90.7 178C111.7 178 128.1 164.6 130.9 144.1H94.3V125.2H153V131.8C153 160 131.2 198 90.5 198C53.8 198 23 170.2 23 128C23 85.7 54.3 58 90.9 58C114.9 58 135 68.3 146.4 84.7L119.7 88.6Z" fill="#07111F"/>
+  <path d="M173.5 58C203.7 58 228.8 76.8 235 104.8H209.2C204.1 91 191.3 82.2 175 82.2C151.4 82.2 134.7 100.1 134.7 128C134.7 155.7 151.2 173.8 175.1 173.8C191.5 173.8 204.1 165 209.2 151.2H235C228.7 179.3 203.6 198 173.4 198C135.3 198 110.1 170.2 110.1 128C110.1 85.7 135.3 58 173.5 58Z" fill="#07111F"/>
+</svg>
